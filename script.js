@@ -1,3 +1,5 @@
 // Portfolio Website JavaScript
 
-console.log("Welcome to Rahul Yadav's Portfolio!");
+document.addEventListener("DOMContentLoaded", () => {
+    console.log("Welcome to Rahul Yadav's Portfolio!");
+});
