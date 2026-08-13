@@ -4,7 +4,7 @@ A personal portfolio website showcasing my skills, projects, education, and prof
 
 ## 🌐 Live Demo
 
-https://rahulyadav-cs.github.io/portfolio-website/
+[visit my portfolio](https://rahulyadav-cs.github.io/portfolio-website/)
 
 ## ✨ Features
 
