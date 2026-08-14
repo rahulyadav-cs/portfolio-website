@@ -797,6 +797,40 @@ footer p:first-child {
         grid-template-columns: 1fr;
     }
 
+    /* Fix NavBar */
+@media (max-width: 768px) {
+
+    .navbar .nav-container {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        width: 100% !important;
+    }
+
+    .navbar .logo {
+        display: block;
+        flex-shrink: 0;
+    }
+
+    .navbar .menu-toggle {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        flex-shrink: 0 !important;
+        margin: 0 0 0 auto !important;
+    }
+
+    .navbar #nav-menu {
+        display: none !important;
+    }
+
+    .navbar #nav-menu.active {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+}
+
     .social-card {
         max-width: 100%;
     }
