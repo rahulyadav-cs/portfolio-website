@@ -37,7 +37,7 @@ a {
 }
 
 
-/* ------------- Navbar -------------*/
+/* ================= NAVBAR ================= */
 
 .navbar {
     position: sticky;
@@ -84,7 +84,8 @@ a {
 }
 
 
-/* ------------- Hero -------------*/
+/* ================= HERO ================= */
+
 .hero {
     min-height: 92vh;
 
@@ -222,7 +223,8 @@ a {
 }
 
 
-/* ------------- Sections -------------*/
+/* ================= SECTIONS ================= */
+
 .section {
     max-width: 1100px;
     margin: auto;
@@ -261,7 +263,7 @@ a {
 }
 
 
-/* ------------- About -------------*/
+/* ================= ABOUT ================= */
 
 .about-card {
     display: grid;
@@ -309,7 +311,7 @@ a {
 }
 
 
-/* ------------- Skills -------------*/
+/* ================= SKILLS ================= */
 
 .skills-grid {
     display: grid;
@@ -351,7 +353,7 @@ a {
 }
 
 
-/* ------------- Projects -------------*/
+/* ================= PROJECTS ================= */
 
 .projects-grid {
     display: grid;
@@ -442,7 +444,7 @@ a {
 }
 
 
-/* ------------- Education -------------*/
+/* ================= EDUCATION ================= */
 
 .education-card {
     display: grid;
@@ -478,7 +480,7 @@ a {
 }
 
 
-/* ------------- Contact Form -------------*/
+/* ================= CONTACT FORM ================= */
 
 .contact-form {
     max-width: 750px;
@@ -594,7 +596,7 @@ a {
 }
 
 
-/* ------------- Footer -------------*/
+/* ================= FOOTER ================= */
 
 footer {
     padding: 30px 20px;
@@ -614,7 +616,7 @@ footer p:first-child {
 }
 
 
-/* ------------- Animation -------------*/
+/* ================= ANIMATION ================= */
 
 @keyframes float {
 
@@ -629,7 +631,7 @@ footer p:first-child {
 }
 
 
-/* ------------- Responsive -------------*/
+/* ================= RESPONSIVE ================= */
 
 @media (max-width: 850px) {
 
@@ -701,103 +703,104 @@ footer p:first-child {
     }
 }
 
-/* ------------- Socila Cards -------------*/
+/* ================= MOBILE NAVIGATION ================= */
 
+.menu-toggle {
+    display: none;
 
-.contact-links {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 280px));
-    justify-content: center;
-    gap: 18px;
-    margin-top: 32px;
-}
-
-.social-card {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-
-    padding: 16px 18px;
-
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-
-    text-align: left;
-
-    transition: 0.3s ease;
-}
-
-.social-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--accent);
-
-    box-shadow:
-        0 15px 35px rgba(0, 0, 0, 0.25);
-}
-
-.social-icon {
-    width: 42px;
-    height: 42px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 10px;
-
-    background: rgba(255, 255, 255, 0.06);
+    background: none;
+    border: none;
 
     color: var(--text);
+    font-size: 1.7rem;
 
-    font-weight: 800;
-    font-size: 0.9rem;
-}
+    cursor: pointer;
 
-.linkedin-card .social-icon {
-    font-size: 1.15rem;
-}
-
-.social-info {
-    display: flex;
-    flex-direction: column;
-
-    flex: 1;
-}
-
-.social-info strong {
-    color: var(--text);
-    font-size: 0.95rem;
-}
-
-.social-info small {
-    color: var(--muted);
-    font-size: 0.78rem;
-    margin-top: 2px;
-}
-
-.social-arrow {
-    color: var(--muted);
-    font-size: 1.1rem;
-
-    transition: 0.3s ease;
-}
-
-.social-card:hover .social-arrow {
-    color: var(--accent);
-    transform: translate(3px, -3px);
+    padding: 5px;
 }
 
 
 /* Mobile */
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
 
-    .contact-links {
-        grid-template-columns: 1fr;
+    .nav-container {
+        position: relative;
     }
 
+    .menu-toggle {
+        display: block;
+        z-index: 1001;
+    }
 
+    .nav-container nav {
+        position: absolute;
+
+        top: calc(100% + 10px);
+        left: 0;
+        right: 0;
+
+        display: none;
+        flex-direction: column;
+
+        padding: 15px;
+
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+
+        z-index: 1000;
+    }
+
+    .nav-container nav.active {
+        display: flex;
+    }
+
+    .nav-container nav a {
+        width: 100%;
+
+        padding: 12px 10px;
+
+        border-radius: 8px;
+
+        text-align: center;
+
+        transition: 0.25s ease;
+    }
+
+    .nav-container nav a:hover {
+        background: rgba(255, 255, 255, 0.06);
+        color: var(--accent);
+    }
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#nav-menu {
+    display: flex;
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+
+    #menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    #nav-menu {
+        display: none;
+    }
+
+    #nav-menu.active {
+        display: flex;
+        flex-direction: column;
+    }
+}
 
 @media (max-width: 768px) {
 
@@ -827,7 +830,10 @@ footer p:first-child {
     }
 }
 
-    /* Fix NavBar */
+/* -------------------------------------
+   MOBILE NAVBAR FIX
+--------------------------------------*/
+
 @media (max-width: 768px) {
 
     .navbar .nav-container {
@@ -858,10 +864,5 @@ footer p:first-child {
     .navbar #nav-menu.active {
         display: flex !important;
         flex-direction: column !important;
-    }
-}
-
-    .social-card {
-        max-width: 100%;
     }
 }
